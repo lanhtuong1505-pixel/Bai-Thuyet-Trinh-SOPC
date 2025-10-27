@@ -1,0 +1,163 @@
+# BTT
+Bài Thuyết Trình Của Lành Quốc Tường
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vai trò của Kỹ năng mềm đối với Tuổi trẻ - Lành Quốc Tường</title>
+<style>
+  * {margin:0; padding:0; box-sizing:border-box;}
+  body {
+    font-family: "Segoe UI", sans-serif;
+    overflow: hidden;
+    background: linear-gradient(to bottom right, #e0f7ff, #ffffff);
+    color: #03396c;
+  }
+
+  /* Hiệu ứng tuyết rơi */
+  .snowflake {
+    position: fixed;
+    top: -10px;
+    color: white;
+    font-size: 1.2em;
+    user-select: none;
+    pointer-events: none;
+    animation: fall linear infinite;
+  }
+  @keyframes fall {
+    0% {transform: translateY(0) rotate(0deg);}
+    100% {transform: translateY(100vh) rotate(360deg);}
+  }
+
+  /* Cấu trúc slide */
+  .slide {
+    display: none;
+    height: 100vh;
+    padding: 80px;
+    text-align: center;
+  }
+
+  .active { display: block; }
+
+  h1, h2 {
+    color: #004c99;
+    text-shadow: 1px 1px 2px #dceeff;
+  }
+  h1 span, h2 span { color: #ff4c4c; }
+
+  p {
+    max-width: 900px;
+    margin: 20px auto;
+    line-height: 1.7;
+    font-size: 20px;
+  }
+
+  img {
+    width: 45%;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #a8d8ff;
+  }
+
+  button {
+    background-color: #4ca3ff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: 0.3s;
+  }
+  button:hover { background-color: #007acc; }
+
+  footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Hiệu ứng tuyết -->
+<script>
+  const snowflakes = 50;
+  for (let i = 0; i < snowflakes; i++) {
+    let flake = document.createElement("div");
+    flake.classList.add("snowflake");
+    flake.textContent = "❄";
+    flake.style.left = Math.random() * 100 + "vw";
+    flake.style.animationDuration = 5 + Math.random() * 5 + "s";
+    flake.style.opacity = Math.random();
+    document.body.appendChild(flake);
+  }
+</script>
+
+<!-- SLIDE 1 -->
+<div class="slide active" id="slide1">
+  <h1><span>Vai trò của Kỹ năng Mềm</span> đối với Tuổi Trẻ</h1>
+  <h3>Người trình bày: <span style="color:#ff9900;">Lành Quốc Tường</span></h3>
+  <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/reading-973993_960_720.jpg" alt="Giới thiệu">
+  <p>Kính chào quý thầy cô và các bạn! Tôi là Lành Quốc Tường, hôm nay tôi xin trình bày về một chủ đề có ý nghĩa sâu sắc đối với thế hệ trẻ: <b style="color:#ff4c4c;">Vai trò của Kỹ năng mềm</b> trong cuộc sống hiện đại. Trong thời đại thay đổi nhanh chóng, liệu chỉ có kiến thức chuyên môn thôi đã đủ để thành công và hạnh phúc chưa? Câu trả lời là chưa. Chính kỹ năng mềm – những giá trị về giao tiếp, cảm xúc, thái độ và tư duy – mới là chiếc chìa khóa mở ra tương lai vững chắc.</p>
+  <button onclick="nextSlide()">Tiếp tục</button>
+  <footer>Trang 1 / 5</footer>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide" id="slide2">
+  <h2>1. <span>Kỹ năng mềm là gì?</span></h2>
+  <img src="https://cdn.pixabay.com/photo/2016/11/29/04/17/business-1866589_960_720.jpg" alt="Kỹ năng mềm">
+  <p>Kỹ năng mềm là tập hợp các kỹ năng liên quan đến cách con người tư duy, giao tiếp và hợp tác. Đây không phải là kiến thức chuyên môn, mà là <b style="color:#007acc;">cách bạn làm việc với người khác và ứng xử trước mọi tình huống</b>. Ví dụ như kỹ năng giao tiếp, làm việc nhóm, tư duy phản biện, quản lý thời gian và khả năng thích ứng. Người trẻ sở hữu kỹ năng mềm tốt thường tự tin, linh hoạt và dễ dàng hòa nhập vào bất kỳ môi trường nào.</p>
+  <button onclick="nextSlide()">Tiếp tục</button>
+  <footer>Trang 2 / 5</footer>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide" id="slide3">
+  <h2>2. <span>Tác động tích cực của Kỹ năng mềm</span></h2>
+  <img src="https://cdn.pixabay.com/photo/2018/01/15/07/51/team-3082828_960_720.jpg" alt="Làm việc nhóm">
+  <p><b style="color:#ff9900;">Thứ nhất</b>, kỹ năng mềm là chìa khóa mở cửa sự nghiệp. Nhà tuyển dụng ngày nay tìm kiếm người có khả năng hợp tác, giao tiếp và giải quyết vấn đề hơn là chỉ giỏi lý thuyết. <b style="color:#ff4c4c;">Thứ hai</b>, kỹ năng mềm giúp nâng cao hiệu suất công việc, bởi khi biết lập kế hoạch và quản lý thời gian, chúng ta làm việc chủ động và hiệu quả hơn. <b style="color:#007acc;">Thứ ba</b>, kỹ năng giao tiếp và đồng cảm giúp con người xây dựng mối quan hệ bền vững, giảm xung đột và lan tỏa năng lượng tích cực trong cộng đồng.</p>
+  <button onclick="nextSlide()">Tiếp tục</button>
+  <footer>Trang 3 / 5</footer>
+</div>
+
+<!-- SLIDE 4 -->
+<div class="slide" id="slide4">
+  <h2>3. <span>Hậu quả của việc thiếu Kỹ năng mềm</span></h2>
+  <img src="https://cdn.pixabay.com/photo/2017/08/01/01/10/stress-2562292_960_720.jpg" alt="Thiếu kỹ năng mềm">
+  <p>Thiếu kỹ năng mềm là rào cản lớn trong hành trình phát triển của tuổi trẻ. Một người có điểm số cao nhưng giao tiếp kém sẽ gặp khó khăn trong phỏng vấn và làm việc nhóm. Việc không biết quản lý cảm xúc dẫn đến căng thẳng, mất tự tin và mâu thuẫn. Theo khảo sát, hơn <b style="color:#ff4c4c;">70%</b> sinh viên tốt nghiệp phải đào tạo lại kỹ năng mềm khi đi làm. Đây là lời nhắc nhở mạnh mẽ rằng <b style="color:#007acc;">thành công không chỉ đến từ trí tuệ, mà còn từ thái độ và hành vi</b>.</p>
+  <button onclick="nextSlide()">Tiếp tục</button>
+  <footer>Trang 4 / 5</footer>
+</div>
+
+<!-- SLIDE 5 -->
+<div class="slide" id="slide5">
+  <h2><span>Kết luận & Lời kêu gọi</span></h2>
+  <img src="https://cdn.pixabay.com/photo/2020/06/07/20/38/success-5277320_960_720.jpg" alt="Thành công">
+  <p>Tóm lại, kỹ năng mềm không chỉ là một lợi thế mà là điều kiện đủ để thành công trong thế kỷ 21. Nó giúp chúng ta phát triển toàn diện — có kiến thức, có bản lĩnh và có khả năng thích ứng. <b style="color:#ff9900;">Là một người trẻ </b>,hãy tham gia các câu lạc bộ, hoạt động tình nguyện, học cách lắng nghe và giao tiếp chân thành. <b style="color:#007acc;">Kỹ năng mềm chính là hành trang quý giá nhất</b> trên con đường chinh phục tương lai của mỗi người chúng ta.</p>
+  <button onclick="restart()">Trình chiếu lại</button>
+  <footer>Trang 5 / 5</footer>
+</div>
+
+<script>
+let currentSlide = 1;
+function nextSlide() {
+  document.getElementById("slide" + currentSlide).classList.remove("active");
+  currentSlide++;
+  if (currentSlide > 5) currentSlide = 1;
+  document.getElementById("slide" + currentSlide).classList.add("active");
+}
+function restart() {
+  document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+  currentSlide = 1;
+  document.getElementById("slide1").classList.add('active');
+}
+</script>
+</body>
+</html>
